@@ -1,0 +1,65 @@
+{% extends 'nav.html'%}
+
+{% block content %}
+<script type="text/javascript" src="{{url_for('static', filename='delete.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='delete.css')}}">
+<script>
+    var item = {{item | tojson}};
+</script>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 id="edit">Delete Item From Inventory</h1>
+    </div>
+</div>
+<form id="delete-form" novalidate>
+    <div class="form-group row">
+        <label class="col-md-2 col-form-label">Item Selected: </label>
+        <div class="col-md-4">
+            <select id="deleting" required>
+                <option value="0" selected>Choose...</option>
+                {% for item in data%}
+                    <option value="{{item['id']}}">{{item['name']}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-5" id="delete-cmt">
+            <label class="form-group">Deletion Comment: </label>
+            <input type="text" class="form-control" id="input-comment">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7"></div>
+        <div class="col-md-2">
+            <button id="submit-change" class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+<div class="row last"></div>
+
+<div class="row" id="index">
+    <div class="col-md-1">ID</div>
+    <div class="col-md-2">Item Name</div>
+    <div class="col-md-2">Category</div>
+    <div class="col-md-3">Deletion Comment</div>
+    <div class="col-md-3">Deletion Time</div>
+</div>
+
+{% for item in deleted %}
+    <div class="row" id="inventory">
+        <div class="col-md-1">{{item['id']}}</div>
+        <div class="col-md-2">{{item['name']}}</div>
+        <div class="col-md-2">{{item['category']}}</div>
+        <div class="col-md-3">{{item['deletion_comment']}}</div>
+        <div class="col-md-3">{{item['deleted_date']}}</div>
+        <div class="col-md-1">
+            <a href="" id="{{item['id']}}">
+                <button class="undo">Undo</button>
+            </a>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

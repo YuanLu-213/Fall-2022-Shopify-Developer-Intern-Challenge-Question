@@ -1,0 +1,14 @@
+.row{   
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+#index{
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#inventory{
+    margin-bottom: 20px;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+#title{
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-bottom: 80px;
+}
+#brand{
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+}
+#submit-nav{
+    background-image: white;
+    color: black;
+    margin-right: 15px;
+    margin-left: 750px;
+}
+#edit-nav{
+    background-image: white;
+    color: black;
+    margin-right: 15px;
+}
+#del-nav{
+    background-image: white;
+    color: black;
+}

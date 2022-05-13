@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='nav.css')}}">
+        <!-- <script type="text/javascript" src="{{url_for('static', filename='search.js')}}"></script> -->
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="title">Shopify Inventory Management</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                <a class="navbar-brand" id="brand" href="/">S.I.M</a>
+                <a href="/add">
+                    <button id="submit-nav" class="btn btn-light my-2 my-sm-0">Add</button>
+                </a>
+                <a href="/edit/0">
+                    <button id="edit-nav" class="btn btn-light my-2 my-sm-0">Edit</button>
+                </a>
+                <a href="/delete/0">
+                    <button id="del-nav" class="btn btn-light my-2 my-sm-0" >Delete</button>
+                </a>
+            </nav>
+            <div id="warn"></div>
+        </div>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'nav.html'%}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+</head>
+<div class="row">
+        <div class="col-md-4">
+            <h2>Inventory List: </h2>
+        </div>
+        <a href="/add">
+            <button>Add</button>
+        </a>
+</div>
+
+<div class="row" id="index">
+    <div class="col-md-1">ID</div>
+    <div class="col-md-2">Item Name</div>
+    <div class="col-md-2">Category</div>
+    <div class="col-md-3">Creation Time</div>
+</div>
+
+{% for item in data %}
+    <div class="row" id="inventory">
+        <div class="col-md-1">{{item['id']}}</div>
+        <div class="col-md-2">{{item['name']}}</div>
+        <div class="col-md-2">{{item['category']}}</div>
+        <div class="col-md-3">{{item['creation_date']}}</div>
+        <div class="col-md-2">
+            <a href="/edit/{{item['id']}}">
+                <button class="button">Edit</button>
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a href="/delete/{{item['id']}}">
+                <button class="button">Delete</button>
+            </a>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
