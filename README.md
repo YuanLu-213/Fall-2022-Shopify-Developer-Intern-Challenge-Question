@@ -5,7 +5,7 @@ The appliication is a simple inventory tracking and managemeny system where admi
 
 The database for this application is coded in the backend. However, it is totally feasible to work with whatever databases the inventory uses.
 
-To run the application, open a terminal in the folder where the code files are located and run the following commands:
+To run the application, open a terminal in the folder where the code files are located and run the following commands in the Shell:
 
 export FLASK_APP=server.py
 
