@@ -14,4 +14,4 @@ Because Replit only runs flask projects on host "0.0.0.0", we will use following
 flask run -h 0.0.0.0
 
 
-When the browser opens up in the Replit window, the layout is changed due to the limited size of the window. Please open it in a new tab or enlarge the window by dragging the sides of the window to see the correct layout.
+When the browser opens up in the Replit window, the layout is changed due to the limited size of the window. The page layout is not implemented as reponsive. So please open it in a new tab or enlarge the window by dragging the sides of the window to see the correct layout.
