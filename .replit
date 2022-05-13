@@ -1,2 +1,2 @@
-language = "bash"
-run = ["export FLASK_APP=server.py", 'flask run']
+language = "python3"
+run = "python server.py"
