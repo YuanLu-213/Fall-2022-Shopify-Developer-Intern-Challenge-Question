@@ -5,8 +5,13 @@ The appliication is a simple inventory tracking and managemeny system where admi
 
 The database for this application is coded in the backend. However, it is totally feasible to work with whatever databases the inventory uses.
 
-To run the application, open a terminal in the folder where the code files are located and run the following command:
+To run the application, open a terminal in the folder where the code files are located and run the following commands:
 
 export FLASK_APP=server.py
 
-flask run
+Because Replit only runs flask projects on host "0.0.0.0", we will use following command to run it on the correct host
+
+flask run -h 0.0.0.0
+
+
+When the browser opens up in the Replit window, the layout is changed due to the limited size of the window. Please open it in a new tab or enlarge the window by dragging the sides of the window to see the correct layout.
